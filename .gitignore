@@ -1,0 +1,8 @@
+.venv/
+__pycache__/
+*.pyc
+service_fnn/models/
+service_cnn/models/
+service_rnn/models/
+uploads/
+data/
