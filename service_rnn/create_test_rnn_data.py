@@ -1,9 +1,7 @@
 import pandas as pd
 import os
 
-
 os.makedirs("../data", exist_ok=True)
-
 
 data = [
     {"note": "Infestação detectada, ação imediata!", "label": "urgente"},

@@ -1,4 +1,4 @@
-# service_rnn/app.py
+
 from flask import Flask, request, jsonify
 import pandas as pd
 import os
@@ -11,9 +11,6 @@ app = Flask(__name__)
 DATA_PATH = "../data/field_notes_database.csv"
 os.makedirs(os.path.dirname(DATA_PATH), exist_ok=True)
 
-# -------------------------------
-# Endpoint para registrar notas
-# -------------------------------
 @app.route('/log/note', methods=['POST'])
 def log_note():
     data = request.get_json()

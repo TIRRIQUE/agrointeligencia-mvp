@@ -50,7 +50,7 @@ def predict_leaf_image():
         img_data = base64.b64decode(img_b64)
         img = Image.open(io.BytesIO(img_data)).resize((64,64))
         img_array = np.array(img)/255.0
-        if img_array.shape[-1] == 4:  # remover canal alpha, se existir
+        if img_array.shape[-1] == 4:  
             img_array = img_array[:,:,:3]
         img_array = np.expand_dims(img_array, axis=0)
         pred = model.predict(img_array)[0][0]
